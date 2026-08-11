@@ -3,95 +3,273 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0d0b09">
-<title>Our Wedding Invitation</title>
+<meta name="theme-color" content="#4a0e1a">
+<title>Satish & Mohana — Wedding Invitation</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
-:root{--gold:#d8b46a;--gold2:#f3d99b;--cream:#fbf3e3;--ink:#090806;--muted:#cbbda8}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--cream);font-family:Montserrat,sans-serif;font-weight:300;overflow-x:hidden}
-section{min-height:100svh;position:relative;overflow:hidden}.serif{font-family:"Cormorant Garamond",serif}.kicker{letter-spacing:.32em;text-transform:uppercase;font-size:10px;color:var(--gold)}
-.hero{display:grid;place-items:end center;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.82)),url("assets/couple_1.jpg") center/cover;isolation:isolate}
-.hero:before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle,rgba(255,255,255,.12) 0 1px,transparent 2px);background-size:55px 55px;animation:drift 18s linear infinite;opacity:.22;z-index:1}
-@keyframes drift{to{transform:translate3d(55px,55px,0)}}.overlay{position:absolute;inset:0;background:radial-gradient(circle at 50% 15%,transparent 0 20%,rgba(0,0,0,.12) 48%,rgba(0,0,0,.78) 100%);z-index:0}
-.hero .content{text-align:center;padding:12vh 24px 10vh;width:min(760px,100%);z-index:2;animation:heroIn 1.5s cubic-bezier(.2,.8,.2,1) both}
-@keyframes heroIn{from{opacity:0;transform:translateY(35px) scale(.97)}to{opacity:1;transform:none}}
-h1{font-size:clamp(58px,15vw,128px);line-height:.78;margin:18px 0 20px;font-weight:500;text-shadow:0 4px 30px #000}.amp{font-size:.48em;color:var(--gold);display:inline-block;margin:0 8px}.date{letter-spacing:.12em;font-size:11px;line-height:1.8}.scroll{margin-top:42px;color:var(--muted);font-size:9px;letter-spacing:.25em;text-transform:uppercase;animation:breathe 2.4s ease-in-out infinite}@keyframes breathe{50%{opacity:.35;transform:translateY(5px)}}
-.intro{display:grid;place-items:center;text-align:center;padding:80px 28px;background:radial-gradient(circle at 50% 0,#32291d 0,#0d0b09 48%)}.intro .orn{font-size:30px;color:var(--gold);margin-bottom:20px;animation:spin 8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.intro h2{font-size:clamp(42px,10vw,74px);font-weight:500;margin:0 0 20px}.intro p{max-width:620px;line-height:1.9;color:var(--muted);font-size:13px}
-.reveal{opacity:0;transform:translateY(45px) scale(.97);transition:opacity 1s ease,transform 1.1s cubic-bezier(.2,.8,.2,1)}.reveal.show{opacity:1;transform:none}
-.video{padding:70px 18px;background:#070606}.video .head{text-align:center;margin-bottom:28px}.video h2,.events h2,.gallery h2,.venue h2{font-size:48px;margin:8px 0;font-weight:500}.video-frame{width:min(900px,100%);margin:auto;border-radius:22px;overflow:hidden;border:1px solid rgba(216,180,106,.3);box-shadow:0 20px 70px rgba(0,0,0,.45);position:relative}.video-frame:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 0 40%,rgba(255,255,255,.14) 50%,transparent 60%);transform:translateX(-120%);animation:shine 5s ease-in-out infinite}@keyframes shine{45%,100%{transform:translateX(120%)}}video{display:block;width:100%;max-height:78svh;background:#000}
-.events{padding:90px 18px;background:#f5eddf;color:#17130e}.events .sub,.venue .sub{color:#8c7653}.event-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:900px;margin:35px auto}.card{background:#fffaf0;border:1px solid #dfcda9;padding:34px 22px;text-align:center;border-radius:18px;box-shadow:0 12px 35px rgba(74,49,15,.08);transition:transform .45s,box-shadow .45s}.card:hover{transform:translateY(-8px);box-shadow:0 25px 50px rgba(74,49,15,.16)}.card .num{font-size:10px;letter-spacing:.28em;color:#9b7a3c}.card h3{font:500 38px "Cormorant Garamond",serif;margin:12px 0}.card p{font-size:12px;line-height:1.8;color:#6d6254}.goldline{width:48px;height:1px;background:#caa65e;margin:15px auto}
-.scratch-wrap{max-width:1000px;margin:38px auto;position:relative;border-radius:16px;overflow:hidden}.scratch-wrap img{width:100%;display:block;filter:saturate(.95)}.scratch-caption{position:absolute;left:20px;bottom:18px;padding:8px 14px;border:1px solid rgba(255,255,255,.4);border-radius:999px;background:rgba(0,0,0,.35);backdrop-filter:blur(8px);font-size:9px;letter-spacing:.18em;text-transform:uppercase}
-.gallery{padding:90px 14px;background:#10100e}.gallery-head{text-align:center;margin-bottom:30px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:1000px;margin:auto}.grid figure{margin:0;position:relative;overflow:hidden;border-radius:12px}.grid img{width:100%;height:52vw;max-height:520px;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.8,.2,1),filter 1.2s}.grid figure:hover img{transform:scale(1.06);filter:brightness(1.1)}.grid img:nth-child(2),.grid img:nth-child(3){height:68vw}
-.venue{padding:90px 24px;text-align:center;background:linear-gradient(180deg,#17130e,#080706)}.venue p{color:var(--muted);line-height:1.9;font-size:13px}.mapbtn,.rsvp{display:inline-block;margin-top:20px;padding:14px 22px;border:1px solid var(--gold);color:var(--cream);text-decoration:none;border-radius:99px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;transition:.35s}.mapbtn:hover,.rsvp:hover{background:var(--gold);color:#1a1308;box-shadow:0 0 35px rgba(216,180,106,.35)}
-.countdown{padding:80px 20px;text-align:center;background:#0d0b09}.timer{display:flex;justify-content:center;gap:12px;margin-top:28px}.unit{min-width:72px;padding:17px 8px;border:1px solid rgba(216,180,106,.35);border-radius:12px}.unit b{display:block;font:500 32px "Cormorant Garamond",serif;color:var(--gold)}.unit span{font-size:8px;letter-spacing:.18em;color:var(--muted)}
-.final{min-height:90svh;display:grid;place-items:end center;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.86)),url("assets/couple_3.jpg") center/cover}.final .content{text-align:center;padding:90px 20px 12vh}.final h2{font-size:64px;font-weight:500;margin:10px}.final p{color:#ddd0bb;font-size:12px;letter-spacing:.08em}.petals{position:fixed;inset:0;pointer-events:none;z-index:20;overflow:hidden}.petal{position:absolute;top:-30px;width:8px;height:13px;border-radius:80% 10% 80% 10%;background:linear-gradient(135deg,#f3d99b,#b8863c);opacity:.7;animation:fall linear infinite}@keyframes fall{to{transform:translate3d(90px,110vh,0) rotate(720deg)}}.gold-cursor{position:fixed;width:8px;height:8px;border-radius:50%;background:var(--gold2);box-shadow:0 0 18px var(--gold);pointer-events:none;z-index:50;opacity:0;transform:translate(-50%,-50%)}
-@media(max-width:600px){.event-grid{grid-template-columns:1fr}.grid img{height:70vw}.grid img:nth-child(2),.grid img:nth-child(3){height:90vw}.timer{gap:6px}.unit{min-width:64px}}
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap');
+
+:root{
+  --maroon:#4a0e1a;
+  --maroon-deep:#320a12;
+  --gold:#c9a15a;
+  --gold-light:#e8cf9a;
+  --ivory:#fbf3e3;
+  --paper:#fffaf1;
+  --vermilion:#a83232;
+  --ink:#2a1810;
+  --muted:#8c7360;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
+body{margin:0;background:var(--maroon-deep);color:var(--ivory);font-family:Jost,sans-serif;font-weight:300;overflow-x:hidden;max-width:100vw}
+.serif{font-family:"Cormorant Garamond",serif}
+.display{font-family:Marcellus,serif}
+section{position:relative;overflow:hidden}
+.kicker{letter-spacing:.32em;text-transform:uppercase;font-size:10px;color:var(--gold)}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* ---- kolam divider (signature element) ---- */
+.kolam{display:flex;justify-content:center;margin:0 auto;width:120px}
+.kolam svg{width:100%;overflow:visible}
+.kolam path,.kolam circle{stroke:var(--gold);stroke-width:1.1;fill:none;stroke-dasharray:400;stroke-dashoffset:400;transition:stroke-dashoffset 1.8s ease}
+.kolam.show path,.kolam.show circle{stroke-dashoffset:0}
+.kolam.dark path,.kolam.dark circle{stroke:var(--vermilion)}
+
+/* ---- hero ---- */
+.hero{min-height:100svh;display:grid;place-items:center;background:linear-gradient(180deg,rgba(50,10,18,.35),rgba(20,4,7,.92)),url("assets/couple_1.jpg") center 25%/cover}
+.hero-frame{position:absolute;inset:14px;border:1px solid rgba(201,161,90,.45);pointer-events:none}
+.hero-frame:before,.hero-frame:after{content:"";position:absolute;width:34px;height:34px;border:1px solid var(--gold)}
+.hero-frame:before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+.hero-frame:after{bottom:-1px;right:-1px;border-left:0;border-top:0}
+.hero .content{text-align:center;padding:8vh 24px;width:min(760px,100%);z-index:2;animation:heroIn 1.6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes heroIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.hero h1{font-size:clamp(52px,13vw,104px);line-height:.95;margin:22px 0 8px;font-weight:400;text-shadow:0 4px 30px rgba(0,0,0,.6)}
+.hero .amp{font-size:.5em;color:var(--gold);display:block;margin:6px 0}
+.hero .date{letter-spacing:.14em;font-size:11px;line-height:2;color:var(--gold-light);margin-top:18px}
+.scroll{margin-top:44px;color:var(--gold);font-size:9px;letter-spacing:.28em;text-transform:uppercase;animation:breathe 2.6s ease-in-out infinite}
+@keyframes breathe{50%{opacity:.4;transform:translateY(4px)}}
+
+/* ---- intro / blessing ---- */
+.intro{padding:110px 28px 100px;text-align:center;background:radial-gradient(circle at 50% 0%,#5a1420 0%,var(--maroon-deep) 60%)}
+.intro h2{font-size:clamp(34px,7vw,52px);font-weight:400;margin:26px 0 22px;color:var(--ivory)}
+.intro p{max-width:560px;margin:0 auto;line-height:2;color:var(--gold-light);font-size:13px;letter-spacing:.02em}
+.intro .sig{margin-top:34px;font-size:14px;color:var(--gold);letter-spacing:.06em}
+
+/* ---- video ---- */
+.video{padding:100px 18px 110px;background:var(--maroon-deep);text-align:center}
+.video .head{margin-bottom:38px}
+.video h2{font-size:44px;font-weight:400;margin:18px 0 0}
+.video-frame{width:min(880px,100%);margin:auto;position:relative;padding:10px;border:1px solid rgba(201,161,90,.35)}
+.video-frame:before{content:"";position:absolute;inset:-9px;border:1px solid rgba(201,161,90,.15)}
+video{display:block;width:100%;max-height:76svh;background:#000}
+
+/* ---- events (temple-arch cards) ---- */
+.events{padding:110px 18px 120px;background:var(--paper);color:var(--ink);text-align:center}
+.events .sub{color:var(--muted);margin-top:6px;font-size:12px;letter-spacing:.05em}
+.events h2{font-size:44px;font-weight:400;margin:18px 0 0}
+.event-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;max-width:880px;margin:50px auto 0}
+.arch{background:var(--ivory);border:1px solid #ddc79a;border-radius:120px 120px 8px 8px;padding:48px 26px 34px;position:relative;box-shadow:0 18px 45px rgba(74,14,26,.08)}
+.arch:before{content:"";position:absolute;top:26px;left:50%;transform:translateX(-50%);width:34px;height:34px;border:1px solid var(--gold);border-radius:50%}
+.arch .icon{font-size:14px;color:var(--gold);margin-bottom:2px}
+.arch .num{font-size:10px;letter-spacing:.28em;color:var(--vermilion);margin-top:14px}
+.arch h3{font:400 34px Marcellus,serif;margin:14px 0 4px;color:var(--maroon)}
+.arch .time{font:500 26px "Cormorant Garamond",serif;color:var(--vermilion);margin:10px 0 2px}
+.arch p{font-size:12px;line-height:1.9;color:var(--muted);margin:8px 0 0}
+.goldline{width:44px;height:1px;background:var(--gold);margin:16px auto}
+
+/* ---- moment / scratch-style feature ---- */
+.moment{padding:100px 18px;background:var(--maroon-deep);text-align:center}
+.moment h2{font-size:40px;font-weight:400;margin:18px 0 8px}
+.moment p.lead{color:var(--gold-light);font-size:12px;max-width:420px;margin:0 auto;line-height:1.8}
+.moment-frame{max-width:760px;margin:36px auto 0;position:relative;border:1px solid rgba(201,161,90,.35);padding:8px}
+.moment-frame img{width:100%;display:block}
+.moment-caption{position:absolute;left:18px;bottom:18px;padding:8px 16px;border:1px solid rgba(255,255,255,.35);border-radius:999px;background:rgba(50,10,18,.55);backdrop-filter:blur(8px);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light)}
+
+/* ---- gallery ---- */
+.gallery{padding:100px 14px 110px;background:#1b0810;text-align:center}
+.gallery h2{font-size:40px;font-weight:400;margin:18px 0 40px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:1040px;margin:auto}
+.grid figure{margin:0;position:relative;overflow:hidden}
+.grid img{width:100%;height:100%;min-height:220px;object-fit:cover;display:block;transition:transform 1.1s cubic-bezier(.2,.8,.2,1),filter 1.1s;filter:saturate(.92)}
+.grid figure:hover img{transform:scale(1.07);filter:saturate(1.05) brightness(1.05)}
+.grid figure:nth-child(2){grid-row:span 2}
+
+/* ---- venue ---- */
+.venue{padding:110px 24px;text-align:center;background:radial-gradient(circle at 50% 100%,#5a1420 0%,var(--maroon-deep) 55%)}
+.venue h2{font-size:42px;font-weight:400;margin:18px 0 20px}
+.venue p{color:var(--gold-light);line-height:2;font-size:13px}
+.venue .addr{font-size:13px;letter-spacing:.03em;margin-top:2px}
+.mapbtn,.rsvp{display:inline-block;margin-top:26px;padding:15px 30px;border:1px solid var(--gold);color:var(--ivory);text-decoration:none;border-radius:2px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;transition:.35s;position:relative}
+.mapbtn:hover,.rsvp:hover{background:var(--gold);color:var(--maroon-deep);box-shadow:0 0 40px rgba(201,161,90,.35)}
+
+/* ---- countdown ---- */
+.countdown{padding:90px 20px 100px;text-align:center;background:var(--maroon-deep)}
+.countdown h2{font-size:36px;font-weight:400;margin:16px 0 8px}
+.timer{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:30px}
+.unit{width:clamp(58px,20vw,74px);padding:18px 6px;border:1px solid rgba(201,161,90,.4)}
+.unit b{display:block;font:400 32px "Cormorant Garamond",serif;color:var(--gold)}
+.unit span{font-size:8px;letter-spacing:.2em;color:var(--muted)}
+
+/* ---- final / seal ---- */
+.final{min-height:92svh;display:grid;place-items:center;background:linear-gradient(180deg,rgba(20,4,7,.25),rgba(20,4,7,.92)),url("assets/couple_3.jpg") center 30%/cover;text-align:center}
+.final .content{padding:12vh 24px}
+.seal{width:70px;height:70px;margin:0 auto 22px;border-radius:50%;border:1.5px solid var(--vermilion);display:grid;place-items:center;background:radial-gradient(circle,rgba(168,50,50,.18),transparent 70%)}
+.seal span{font-family:Marcellus,serif;font-size:20px;color:var(--vermilion)}
+.final h2{font-size:52px;font-weight:400;margin:6px 0 14px}
+.final p{color:var(--gold-light);font-size:12px;letter-spacing:.08em;line-height:1.9}
+
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 1s ease,transform 1.1s cubic-bezier(.2,.8,.2,1)}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:680px){
+  .event-grid{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .grid figure:nth-child(2){grid-row:auto}
+  .grid img{min-height:180px}
+  .timer{gap:8px}
+  .unit{width:clamp(52px,20vw,62px);padding:14px 4px}
+  .hero h1{word-break:break-word}
+}
 </style>
 </head>
 <body>
-<section class="hero"><div class="overlay"></div><div class="content">
-<div class="kicker">A Celebration of Love</div>
-<h1 class="serif">Satish <span class="amp">&</span> Mohana</h1>
-<div class="date">26 AUGUST · WEDDING NIGHT &nbsp; • &nbsp; 27 AUGUST · RECEPTION</div>
-<div class="scroll">Scroll to begin ↓</div>
-</div></section>
 
-<section class="intro"><div>
-<div class="orn">✦</div>
-<div class="kicker">With the blessings of our families</div>
-<h2 class="serif">Two hearts.<br>One beautiful beginning.</h2>
-<p>We invite you to be part of our special celebration as we begin a new chapter together. Your presence and blessings will make our moments even more memorable.</p>
-</div></section>
-
-<section class="video"><div class="head reveal">
-<div class="kicker">Our story in motion</div><h2 class="serif">A Little Glimpse</h2>
-</div><div class="video-frame"><video controls playsinline preload="metadata" poster="assets/couple_1.jpg"><source src="assets/prewedding.mp4" type="video/mp4"></video></div></section>
-
-<section class="events"><div class="reveal" style="text-align:center"><div class="kicker">Save the dates</div><h2 class="serif">The Celebrations</h2><div class="sub">Join us for two beautiful evenings</div></div>
-<div class="event-grid reveal">
-<div class="card"><div class="num">26 AUGUST</div><h3 class="serif">The Wedding</h3><div class="goldline"></div><p>Wedding ceremony<br><strong>3:31 AM</strong><br><span style="font-size:11px">Muhurtham · Early hours of Thursday, 27 August</span><br></p></div>
-<div class="card"><div class="num">27 AUGUST</div><h3 class="serif">The Reception</h3><div class="goldline"></div><p>Reception celebration<br><strong>6:00 PM</strong><br>27 August<br>Sri Devi Function Hall</p></div>
-</div></section>
-
-<section class="scratch-section" style="padding:90px 18px;background:#0a0907;text-align:center">
-<div class="reveal">
-<div class="kicker">A little surprise</div>
-<h2 class="serif" style="font-size:48px;margin:8px 0 10px">Scratch. Reveal. Smile.</h2>
-<p style="color:var(--muted);font-size:12px;line-height:1.8">A hidden moment from their story is waiting below.</p>
-</div>
-<div class="Our little Moment">
-<img src="assets/couple_4.jpg" alt="A moment from the couple's pre-wedding shoot">
-<div class="scratch-caption">Our little moment ✦</div>
-</div>
-</section>
-<section class="gallery"><div class="gallery-head reveal"><div class="kicker">Moments we cherish</div><h2 class="serif">Our Gallery</h2></div>
-<div class="grid reveal"><img src="assets/couple_1.jpg"><img src="assets/couple_2.jpg"><img src="assets/couple_3.jpg"><img src="assets/couple_4.jpg"></div></section>
-
-<section class="venue"><div class="reveal"><div class="kicker">Come celebrate with us</div><h2 class="serif">Venue & Directions</h2>
-<p><strong>SRI DEVI FUNCTION HALL</strong><br>Lakshminarasapuram, G. Mamidada, Andhra Pradesh 533344</p>
-<a class="mapbtn" href="https://maps.app.goo.gl/hGjJPnRxGJU4g3c17" target="_blank" rel="noopener">Open in Google Maps</a></div>
+<section class="hero">
+  <div class="hero-frame"></div>
+  <div class="content">
+    <div class="kicker">With the blessings of our families</div>
+    <h1 class="serif">Satish<span class="amp">&</span>Mohana</h1>
+    <div class="kolam" id="k-hero"><svg viewBox="0 0 100 40"><path d="M10 20 C10 8,25 8,25 20 C25 32,40 32,40 20 C40 8,55 8,55 20 C55 32,70 32,70 20 C70 8,85 8,85 20 C85 32,95 26,95 20"/><circle cx="10" cy="20" r="1.6"/><circle cx="50" cy="20" r="1.6"/><circle cx="90" cy="20" r="1.6"/></svg></div>
+    <div class="date">26 AUGUST · WEDDING &nbsp;·&nbsp; 27 AUGUST · RECEPTION<br>SRI DEVI FUNCTION HALL</div>
+    <div class="scroll">Scroll to begin ↓</div>
+  </div>
 </section>
 
-<section class="countdown"><div class="reveal"><div class="kicker">Counting down to forever</div><h2 class="serif">See you there</h2><div class="timer">
-<div class="unit"><b id="d">--</b><span>DAYS</span></div><div class="unit"><b id="h">--</b><span>HOURS</span></div><div class="unit"><b id="m">--</b><span>MINUTES</span></div><div class="unit"><b id="s">--</b><span>SECONDS</span></div></div></section>
+<section class="intro">
+  <div class="reveal">
+    <div class="kicker">Two families, one blessing</div>
+    <h2 class="serif">Two hearts begin<br>one beautiful journey.</h2>
+    <div class="kolam" id="k-intro"><svg viewBox="0 0 100 30"><path d="M5 15 Q25 -5,50 15 T95 15"/><path d="M5 15 Q25 35,50 15 T95 15"/></svg></div>
+    <p>We joyfully invite you to witness the union of Satish and Mohana, as two families come together in celebration, tradition and love. Your presence and blessings will make our moments complete.</p>
+    <div class="sig">Satish Reddy &amp; Mohana Lakshmi</div>
+  </div>
+</section>
 
-<section class="final"><div class="overlay"></div><div class="content reveal">
-<div class="kicker">Your presence is our greatest gift</div><h2 class="serif">See you soon</h2><p>Satish Reddy & Mohana Lakshmi<br>With love, laughter & blessings</p>
+<section class="video">
+  <div class="head reveal">
+    <div class="kicker">Our story in motion</div>
+    <h2 class="serif">A Little Glimpse</h2>
+  </div>
+  <div class="video-frame reveal">
+    <video controls playsinline preload="metadata" poster="assets/couple_1.jpg">
+      <source src="assets/prewedding.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
 
-</div></section>
+<section class="events">
+  <div class="reveal">
+    <div class="kicker">Save the dates</div>
+    <h2 class="serif">The Celebrations</h2>
+    <div class="sub">Join us for two sacred evenings</div>
+  </div>
+  <div class="event-grid reveal">
+    <div class="arch">
+      <div class="icon">✦</div>
+      <div class="num">26 — 27 AUGUST</div>
+      <h3 class="serif">The Wedding</h3>
+      <div class="goldline"></div>
+      <div class="time">3:31 AM</div>
+      <p>Muhurtham · early hours of Thursday, 27 August<br>Sri Devi Function Hall</p>
+    </div>
+    <div class="arch">
+      <div class="icon">✦</div>
+      <div class="num">27 AUGUST</div>
+      <h3 class="serif">The Reception</h3>
+      <div class="goldline"></div>
+      <div class="time">6:00 PM</div>
+      <p>Evening reception celebration<br>Sri Devi Function Hall</p>
+    </div>
+  </div>
+</section>
+
+<section class="moment">
+  <div class="reveal">
+    <div class="kicker">A little surprise</div>
+    <h2 class="serif">A Moment We Cherish</h2>
+    <p class="lead">A favourite frame from their pre-wedding story.</p>
+  </div>
+  <div class="moment-frame reveal">
+    <img src="assets/couple_4.jpg" alt="A moment from the couple's pre-wedding shoot">
+    <div class="moment-caption">Our little moment ✦</div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="reveal">
+    <div class="kicker">Moments we cherish</div>
+    <h2 class="serif">Our Gallery</h2>
+  </div>
+  <div class="grid reveal">
+    <figure><img src="assets/couple_1.jpg"></figure>
+    <figure><img src="assets/couple_2.jpg"></figure>
+    <figure><img src="assets/couple_3.jpg"></figure>
+    <figure><img src="assets/couple_4.jpg"></figure>
+  </div>
+</section>
+
+<section class="venue">
+  <div class="reveal">
+    <div class="kicker">Come celebrate with us</div>
+    <h2 class="serif">Venue &amp; Directions</h2>
+    <div class="kolam dark" id="k-venue"><svg viewBox="0 0 100 30"><path d="M5 15 L30 15 M70 15 L95 15"/><circle cx="50" cy="15" r="10"/><circle cx="50" cy="15" r="1.6"/></svg></div>
+    <p class="addr"><strong>SRI DEVI FUNCTION HALL</strong><br>Lakshminarasapuram, G. Mamidada, Andhra Pradesh 533344</p>
+    <a class="mapbtn" href="https://maps.app.goo.gl/hGjJPnRxGJU4g3c17" target="_blank" rel="noopener">Open in Google Maps</a>
+  </div>
+</section>
+
+<section class="countdown">
+  <div class="reveal">
+    <div class="kicker">Counting down to forever</div>
+    <h2 class="serif">See You There</h2>
+    <div class="timer">
+      <div class="unit"><b id="d">--</b><span>DAYS</span></div>
+      <div class="unit"><b id="h">--</b><span>HOURS</span></div>
+      <div class="unit"><b id="m">--</b><span>MINUTES</span></div>
+      <div class="unit"><b id="s">--</b><span>SECONDS</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="content reveal">
+    <div class="seal"><span>ॐ</span></div>
+    <div class="kicker">Your presence is our greatest gift</div>
+    <h2 class="serif">See you soon</h2>
+    <p>Satish Reddy &amp; Mohana Lakshmi<br>With love, laughter &amp; blessings</p>
+    <a class="rsvp" href="#" onclick="alert('Add RSVP / WhatsApp link here');return false">RSVP</a>
+  </div>
+</section>
+
 <script>
 const target=new Date("2026-08-27T03:31:00+05:30").getTime();
-function tick(){let x=Math.max(0,target-Date.now());let d=Math.floor(x/86400000);x%=86400000;let h=Math.floor(x/3600000);x%=3600000;let m=Math.floor(x/60000);let s=Math.floor(x/1000);document.getElementById('d').textContent=d;document.getElementById('h').textContent=String(h).padStart(2,'0');document.getElementById('m').textContent=String(m).padStart(2,'0');document.getElementById('s').textContent=String(s).padStart(2,'0')}
+function tick(){
+  let x=Math.max(0,target-Date.now());
+  let d=Math.floor(x/86400000);x%=86400000;
+  let h=Math.floor(x/3600000);x%=3600000;
+  let m=Math.floor(x/60000);
+  let s=Math.floor((x%60000)/1000);
+  document.getElementById('d').textContent=d;
+  document.getElementById('h').textContent=String(h).padStart(2,'0');
+  document.getElementById('m').textContent=String(m).padStart(2,'0');
+  document.getElementById('s').textContent=String(s).padStart(2,'0');
+}
 tick();setInterval(tick,1000);
-</script>
 
-<div class="petals" aria-hidden="true"></div><div class="gold-cursor" aria-hidden="true"></div>
-<script>
 const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(x=>observer.observe(x));
-const petals=document.querySelector('.petals');
-for(let i=0;i<18;i++){const p=document.createElement('i');p.className='petal';p.style.left=(Math.random()*100)+'%';p.style.animationDuration=(7+Math.random()*9)+'s';p.style.animationDelay=(-Math.random()*12)+'s';p.style.transform='rotate('+Math.random()*180+'deg)';petals.appendChild(p)}
-const cursor=document.querySelector('.gold-cursor');
-window.addEventListener('pointermove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px';cursor.style.opacity=.7});
+document.getElementById('k-hero').classList.add('show');
+document.querySelectorAll('.kolam').forEach(k=>observer.observe(k));
 </script>
-</body></html>
+</body>
+</html>
