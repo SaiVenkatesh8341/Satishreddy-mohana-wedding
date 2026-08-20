@@ -110,17 +110,39 @@
 #opening.opening-active .opening-particle{animation:particleBurst 1.5s var(--delay) ease-out forwards}
 @keyframes particleBurst{0%{opacity:0;transform:translate(-50%,-50%) scale(.2)}20%{opacity:1}100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(.05)}}
 
+
+/* Guided gestures */
+.gesture-guide{position:absolute;left:50%;z-index:20;transform:translateX(-50%);font:9px Jost,sans-serif;letter-spacing:.18em;text-transform:uppercase;text-align:center;pointer-events:none;white-space:nowrap}
+.open-guide{bottom:7%;color:#dbcaa9;animation:guidePulse 2.2s ease-in-out infinite}.open-guide .hand{display:block;font-size:23px;animation:tapHint 1.5s ease-in-out infinite}
+.scratch-guide{bottom:3.5%;color:#fff0d1;opacity:0;transition:opacity .5s}.scratch-guide .hand{display:inline-block;font-size:20px;animation:scratchHint 1.3s ease-in-out infinite}
+#opening.opening-active .open-guide{opacity:0}#opening.opening-active .scratch-guide{opacity:1}
+.scroll-guide{position:fixed;left:50%;bottom:24px;z-index:900;transform:translateX(-50%);text-align:center;color:var(--gold);font:9px Jost,sans-serif;letter-spacing:.22em;text-transform:uppercase;opacity:0;pointer-events:none}
+.scroll-guide.show{opacity:.9;transition:opacity .7s}.scroll-guide .arrow{display:block;font-size:24px;line-height:22px;animation:scrollNudge 1.7s ease-in-out infinite}
+@keyframes tapHint{0%,100%{transform:translateY(0) scale(1)}45%{transform:translateY(6px) scale(.9)}60%{transform:translateY(0) scale(1)}}
+@keyframes scratchHint{0%,100%{transform:translateX(-8px)}50%{transform:translateX(8px)}}
+@keyframes guidePulse{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes scrollNudge{0%,100%{transform:translateY(-3px)}50%{transform:translateY(9px)}}
+
+/* Interaction guidance: second-page nudge + scratch-card hand */
+.intro.page-nudge{animation:introNudge 1.45s cubic-bezier(.2,.8,.2,1) 2 both}
+@keyframes introNudge{0%,100%{transform:translateY(0)}32%{transform:translateY(24px)}62%{transform:translateY(-5px)}82%{transform:translateY(0)}}
+.scratch{overflow:hidden}
+.scratch-gesture{position:absolute;z-index:6;left:18%;top:55%;width:76px;height:76px;pointer-events:none;filter:drop-shadow(0 5px 8px rgba(0,0,0,.45));animation:scratchHand 2.15s cubic-bezier(.25,.7,.2,1) infinite}
+.scratch-gesture .hand-shape{position:absolute;inset:0;font-size:58px;line-height:76px;transform:rotate(-28deg);text-shadow:0 3px 5px rgba(0,0,0,.35)}
+.scratch-gesture .finger-trail{position:absolute;left:48px;top:31px;width:90px;height:10px;border-radius:10px;background:linear-gradient(90deg,rgba(255,244,205,.05),rgba(255,244,205,.7),rgba(255,244,205,0));filter:blur(1px)}
+.scratch.gesture-done .scratch-gesture{opacity:0;animation:none;transition:opacity .35s}
+@keyframes scratchHand{0%{left:14%;top:57%;opacity:0;transform:scale(.82)}12%{opacity:1}46%{left:57%;top:52%;transform:scale(1)}70%{left:73%;top:60%;opacity:1}84%{opacity:0;transform:scale(.92)}100%{left:14%;top:57%;opacity:0}}
 </style>
 </head>
 <body>
 
-<div id="opening"><div class="opening-inner"><img class="ganesha" src="assets/traditional-card.jpg" alt="Traditional wedding invitation artwork"><div class="opening-title">Satish Reddy & Mohana</div><div class="opening-sub">A Celebration of Love · Tradition · Forever</div><button class="open-btn" id="openBtn"><span>Open Invitation</span></button></div></div>
-<div class="gold-dust"></div><div class="petals"></div>
+<div id="opening"><div class="opening-inner"><img class="ganesha" src="assets/traditional-card.jpg" alt="Traditional wedding invitation artwork"><div class="opening-title">Satish Reddy & Mohana</div><div class="opening-sub">A Celebration of Love · Tradition · Forever</div><button type="button" class="open-btn" id="openBtn"><span>Open Invitation</span></button><div class="gesture-guide open-guide"><span class="hand">👆</span>Tap to open</div><div class="gesture-guide scratch-guide"><span class="hand">↔</span>Scratch to reveal</div></div></div>
+<div id="scrollGuide" class="scroll-guide"><span class="arrow">↓</span>Swipe up to explore</div><div class="gold-dust"></div><div class="petals"></div>
 <section class="hero"><div class="hero-frame"></div><div class="content"><div class="kicker">With the blessings of our families</div><h1 class="serif">Satish Reddy<span class="amp">&</span>Mohana</h1><div class="kolam" id="k-hero"><svg viewBox="0 0 100 40"><path d="M10 20 C10 8,25 8,25 20 C25 32,40 32,40 20 C40 8,55 8,55 20 C55 32,70 32,70 20 C70 8,85 8,85 20 C85 32,95 26,95 20"/><circle cx="10" cy="20" r="1.6"/><circle cx="50" cy="20" r="1.6"/><circle cx="90" cy="20" r="1.6"/></svg></div><div class="date">26 AUGUST · WEDDING &nbsp;·&nbsp; 27 AUGUST · RECEPTION</div><div class="scroll">Scroll to begin ↓</div></div></section>
 <section class="intro" id="invitationStart"><div class="reveal"><div class="kicker">Two families, one blessing</div><h2 class="serif">Two hearts begin<br>one beautiful journey.</h2><div class="kolam" id="k-intro"><svg viewBox="0 0 100 30"><path d="M5 15 Q25 -5,50 15 T95 15"/><path d="M5 15 Q25 35,50 15 T95 15"/></svg></div><p>We joyfully invite you to witness the union of Satish Reddy and Mohana, as two families come together in celebration, tradition and love. Your presence and blessings will make our moments complete.</p><div class="sig">Satish Reddy &amp; Mohana Lakshmi</div></div></section>
 <section class="video"><div class="head reveal"><div class="kicker">Our story in motion</div><h2 class="serif">A Little Glimpse</h2></div><div class="video-frame reveal"><video controls playsinline preload="metadata" poster="assets/couple_1.jpg"><source src="assets/prewedding.mp4" type="video/mp4"></video></div></section>
 <section class="events"><div class="reveal"><div class="kicker">Save the dates</div><h2 class="serif">The Celebrations</h2><div class="sub">Join us for two sacred evenings</div></div><div class="event-grid reveal"><div class="arch"><div class="icon">✦</div><div class="num">26 AUGUST</div><h3 class="serif">The Wedding</h3><div class="goldline"></div><div class="time">3:31 AM</div><p>Muhurtham · early hours of Thursday, 27 August<br>At My Residency</p></div><div class="arch"><div class="icon">✦</div><div class="num">27 AUGUST</div><h3 class="serif">The Reception</h3><div class="goldline"></div><div class="time">6:00 PM</div><p>Evening reception celebration<br>Sri Devi Function Hall</p></div></div></section>
-<section class="moment"><div class="reveal"><div class="kicker">A little surprise</div><h2 class="serif">Scratch. Reveal. Smile.</h2><p class="lead">Reveal a favourite frame from their pre-wedding story.</p></div><div class="scratch reveal" id="scratch"><img src="assets/couple_4.jpg" alt="A favourite frame"><canvas id="scratchCanvas"></canvas></div><div class="scratch-hint">Touch & drag to reveal ✦</div></section>
+<section class="moment"><div class="reveal"><div class="kicker">A little surprise</div><h2 class="serif">Scratch. Reveal. Smile.</h2><p class="lead">Reveal a favourite frame from their pre-wedding story.</p></div><div class="scratch reveal" id="scratch"><img src="assets/couple_4.jpg" alt="A favourite frame"><canvas id="scratchCanvas"></canvas><div class="scratch-gesture" aria-hidden="true"><span class="hand-shape">☝️</span><span class="finger-trail"></span></div></div><div class="scratch-hint">Touch & drag to reveal ✦</div></section>
 <section class="gallery"><div class="reveal"><div class="kicker">Moments we cherish</div><h2 class="serif">Our Gallery</h2></div><div class="grid reveal"><figure><img src="assets/couple_1.jpg"></figure><figure><img src="assets/couple_2.jpg"></figure><figure><img src="assets/couple_3.jpg"></figure><figure><img src="assets/couple_4.jpg"></figure></div></section>
 <section class="venue"><div class="reveal"><div class="kicker">Come celebrate with us</div><h2 class="serif">Venue &amp; Directions</h2><div class="kolam dark" id="k-venue"><svg viewBox="0 0 100 30"><path d="M5 15 L30 15 M70 15 L95 15"/><circle cx="50" cy="15" r="10"/><circle cx="50" cy="15" r="1.6"/></svg></div><p><strong>SRI DEVI FUNCTION HALL</strong><br>Lakshminarasapuram, G. Mamidada, Andhra Pradesh 533344</p><a class="mapbtn" href="https://maps.app.goo.gl/hGjJPnRxGJU4g3c17" target="_blank" rel="noopener">Open in Google Maps</a></div></section>
 <section class="countdown"><div class="reveal"><div class="kicker">Counting down to forever</div><h2 class="serif">See You There</h2><div class="timer"><div class="unit"><b id="d">--</b><span>DAYS</span></div><div class="unit"><b id="h">--</b><span>HOURS</span></div><div class="unit"><b id="m">--</b><span>MINUTES</span></div><div class="unit"><b id="s">--</b><span>SECONDS</span></div></div></div></section>
@@ -133,7 +155,7 @@ const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e
 const petals=document.querySelector('.petals');for(let i=0;i<16;i++){const p=document.createElement('i');p.className='petal';p.style.left=Math.random()*100+'%';p.style.animationDuration=7+Math.random()*9+'s';p.style.animationDelay=-Math.random()*12+'s';petals.appendChild(p)}
 const dust=document.querySelector('.gold-dust');for(let i=0;i<28;i++){const p=document.createElement('i');p.className='dust';p.style.left=Math.random()*100+'%';p.style.top=-Math.random()*20+'%';p.style.setProperty('--x',(Math.random()*180-90)+'px');p.style.animationDuration=9+Math.random()*12+'s';p.style.animationDelay=-Math.random()*14+'s';dust.appendChild(p)}
 // Opening gate
-const opening=document.getElementById('opening');const openBtn=document.getElementById('openBtn');if(openBtn&&opening){openBtn.addEventListener('click',function(){opening.classList.add('opening-active');document.body.style.overflowX='hidden';try{const c=new (window.AudioContext||window.webkitAudioContext)();const o=c.createOscillator(),g=c.createGain();o.type='sine';o.frequency.setValueAtTime(523.25,c.currentTime);o.frequency.exponentialRampToValueAtTime(783.99,c.currentTime+.65);g.gain.setValueAtTime(.0001,c.currentTime);g.gain.exponentialRampToValueAtTime(.045,c.currentTime+.03);g.gain.exponentialRampToValueAtTime(.0001,c.currentTime+.8);o.connect(g).connect(c.destination);o.start();o.stop(c.currentTime+.85)}catch(e){}setTimeout(function(){opening.classList.add('hide');},2100);});}
+const opening=document.getElementById('opening');const openBtn=document.getElementById('openBtn');if(openBtn&&opening){openBtn.addEventListener('click',function(){opening.classList.add('opening-active');document.body.style.overflowX='hidden';try{const c=new (window.AudioContext||window.webkitAudioContext)();const o=c.createOscillator(),g=c.createGain();o.type='sine';o.frequency.setValueAtTime(523.25,c.currentTime);o.frequency.exponentialRampToValueAtTime(783.99,c.currentTime+.65);g.gain.setValueAtTime(.0001,c.currentTime);g.gain.exponentialRampToValueAtTime(.045,c.currentTime+.03);g.gain.exponentialRampToValueAtTime(.0001,c.currentTime+.8);o.connect(g).connect(c.destination);o.start();o.stop(c.currentTime+.85)}catch(e){}setTimeout(function(){opening.classList.add('hide');var intro=document.getElementById('invitationStart');if(intro){setTimeout(function(){intro.classList.add('page-nudge');setTimeout(function(){intro.classList.remove('page-nudge');},3000)},220)}},2100);});}
 // Scratch reveal
 const canvas=document.getElementById('scratchCanvas'),ctx=canvas.getContext('2d');function sizeCanvas(){const r=canvas.getBoundingClientRect(),d=devicePixelRatio||1;canvas.width=r.width*d;canvas.height=r.height*d;ctx.setTransform(d,0,0,d,0,0);ctx.globalCompositeOperation='source-over';const grad=ctx.createLinearGradient(0,0,r.width,r.height);grad.addColorStop(0,'#b68a3e');grad.addColorStop(.5,'#f0d99c');grad.addColorStop(1,'#8b6428');ctx.fillStyle=grad;ctx.fillRect(0,0,r.width,r.height);ctx.fillStyle='rgba(55,20,12,.82)';ctx.font='600 15px Jost';ctx.textAlign='center';ctx.fillText('SCRATCH TO REVEAL',r.width/2,r.height/2);ctx.globalCompositeOperation='destination-out'}sizeCanvas();window.addEventListener('resize',sizeCanvas);let scratching=false,lastX=0,lastY=0;function scratchAt(x,y){ctx.beginPath();ctx.moveTo(lastX,lastY);ctx.lineTo(x,y);ctx.lineWidth=42;ctx.lineCap='round';ctx.stroke()}function pointer(e){const r=canvas.getBoundingClientRect();return [e.clientX-r.left,e.clientY-r.top]}canvas.addEventListener('pointerdown',e=>{scratching=true;[lastX,lastY]=pointer(e);canvas.setPointerCapture(e.pointerId);scratchAt(lastX,lastY)});canvas.addEventListener('pointermove',e=>{if(!scratching)return;const [x,y]=pointer(e);scratchAt(x,y);lastX=x;lastY=y});canvas.addEventListener('pointerup',()=>{scratching=false});canvas.addEventListener('pointercancel',()=>{scratching=false});
 // Gallery lightbox
@@ -172,5 +194,18 @@ const lb=document.getElementById('lightbox'),lbImg=document.getElementById('ligh
 
 
 
+
+<script>
+(function(){
+ const sg=document.getElementById('scrollGuide');
+ if(!sg)return;
+ let dismissed=false;
+ function dismiss(){
+   if(dismissed)return; dismissed=true; sg.classList.remove('show');
+   window.removeEventListener('scroll',dismiss,{passive:true});
+ }
+ window.addEventListener('scroll',dismiss,{passive:true});
+})();
+</script>
 </body>
 </html>
